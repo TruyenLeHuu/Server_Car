@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modules/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/css/main.css">  
+  <link rel="icon" type="image/x-icon" href="/logo/golf_cart.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="modules/dayjs/dayjs.min.js"></script>
+  <script src="modules/jquery/dist/jquery.min.js"></script>
+  <script src="modules/leaflet/dist/leaflet.js"></script>
+  <title>Golf car</title>
+</head>
+
+<body>
+
+
+  <div class="flex flex-col h-screen w-full bg-[#151616] py-5">
+    <div class="flex flex-col w-full items-center justify-center">
+      <p id="time" class="text-[20px] font-[700] text-[#fff]">asd</p>
+    </div>
+    <div class="flex flex-row w-full h-[50%] gap-12 px-8 pt-12">
+      <div class="flex flex-col w-full bg-[#1e1f1f]  p-4 overflow-hidden  rounded-[16px]">
+        <img src="./img/lost_signal.jpg" class="w-full h-full object-cover rounded-[16px]" />
+      </div>
+      <div class="flex flex-col w-full bg-[#1e1f1f] p-4 overflow-hidden rounded-[16px]">
+        <div id="map" class="w-full h-full rounded-[16px]"></div>
+      </div>
+    </div>
+    <div class="flex flex-row w-full h-full relative justify-center items-center px-8 pt-[1%] gap-12">
+      <div class="flex flex-col w-full h-full bg-[#1e1f1f] p-4 overflow-hidden rounded-[16px]">
+        <div class="flex flex-row gap-12">
+          <div class="flex flex-col w-[200px] h-[200px] rounded-full border-[5px] border-[#fff] overflow-hidden">
+            <img src="./img/avatar.png" class="w-full h-full object-cover" />
+          </div>
+          <div class="flex flex-col">
+            <p class="text-[24px] text-[#fff]">Name: Lê Hữu Truyền</p>
+            <p class="text-[24px] text-[#fff]">Role: Sinh viên</p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="flex flex-col w-full h-full items-center justify-center bg-[#1e1f1f]  overflow-hidden rounded-[16px]">
+        <div class='speed'>
+          <div class='speed__wheel'>
+            <div class='speed__tick'>
+              <div class='tick' value='0'></div>
+              <div class='tick' value='10'></div>
+              <div class='tick' value='20'></div>
+              <div class='tick' value='30'></div>
+              <div class='tick' value='40'></div>
+              <div class='tick' value='50'></div>
+              <div class='tick' value='60'></div>
+              <div class='tick' value='70'></div>
+              <div class='tick' value='80'></div>
+              <div class='tick' value='90'></div>
+              <div class='tick' value='100'></div>
+              <div class='tick' value='110'></div>
+              <div class='tick' value='120'></div>
+              <div class='tick' value='130'></div>
+              <div class='tick' value='140'></div>
+              <div class='tick' value='150'></div>
+              <div class='tick' value='160'></div>
+              <div class='tick' value='170'></div>
+              <div class='tick' value='180'></div>
+              <div class='tick' value='190'></div>
+            </div>
+            <div id="speed_wheel_pointer" class='pointer'></div>
+            <div class='endpoint'></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full h-full bg-[#1e1f1f] p-4 overflow-hidden rounded-[16px]">
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/main.js"></script>
+
+</html>

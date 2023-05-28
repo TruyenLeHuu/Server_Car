@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.speed {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: -300px; */
+}
+
+.speed__wheel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #000;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%);
+}
+
+.speed__tick {
+  display: flex;
+  gap: 1px;
+}
+
+.tick {
+  transform-origin: bottom;
+  position: absolute;
+  background: linear-gradient(to top, transparent 90%, red 90%);
+  height: 140px;
+  width: 2px;
+  top: 10px;
+  left: 50%;
+  transform: rotate(var(--angle)) rotateZ(-127deg);
+}
+
+.tick:nth-child(odd)::before {
+  position: absolute;
+  content: attr(value) "";
+  color: #fff;
+  left: -8px;
+  top: 20px;
+  z-index: 11;
+  transform: rotate(var(--position-number));
+}
+
+.tick:nth-child(1) {
+  --angle: 0deg;
+  --position-number: 130deg;
+}
+
+.tick:nth-child(2) {
+  --angle: 13.3333333333deg;
+  --position-number: 116.5deg;
+}
+
+.tick:nth-child(3) {
+  --angle: 26.6666666667deg;
+  --position-number: 103deg;
+}
+
+.tick:nth-child(4) {
+  --angle: 40deg;
+  --position-number: 89.5deg;
+}
+
+.tick:nth-child(5) {
+  --angle: 53.3333333333deg;
+  --position-number: 76deg;
+}
+
+.tick:nth-child(6) {
+  --angle: 66.6666666667deg;
+  --position-number: 62.5deg;
+}
+
+.tick:nth-child(7) {
+  --angle: 80deg;
+  --position-number: 49deg;
+}
+
+.tick:nth-child(8) {
+  --angle: 93.3333333333deg;
+  --position-number: 35.5deg;
+}
+
+.tick:nth-child(9) {
+  --angle: 106.6666666667deg;
+  --position-number: 22deg;
+}
+
+.tick:nth-child(10) {
+  --angle: 120deg;
+  --position-number: 8.5deg;
+}
+
+.tick:nth-child(11) {
+  --angle: 133.3333333333deg;
+  --position-number: -5deg;
+}
+
+.tick:nth-child(12) {
+  --angle: 146.6666666667deg;
+  --position-number: -18.5deg;
+}
+
+.tick:nth-child(13) {
+  --angle: 160deg;
+  --position-number: -32deg;
+}
+
+.tick:nth-child(14) {
+  --angle: 173.3333333333deg;
+  --position-number: -45.5deg;
+}
+
+.tick:nth-child(15) {
+  --angle: 186.6666666667deg;
+  --position-number: -59deg;
+}
+
+.tick:nth-child(16) {
+  --angle: 200deg;
+  --position-number: -72.5deg;
+}
+
+.tick:nth-child(17) {
+  --angle: 213.3333333333deg;
+  --position-number: -86deg;
+}
+
+.tick:nth-child(18) {
+  --angle: 226.6666666667deg;
+  --position-number: -99.5deg;
+}
+
+.tick:nth-child(19) {
+  --angle: 240deg;
+  --position-number: -113deg;
+}
+
+.tick:nth-child(20) {
+  --angle: 253.3333333333deg;
+  --position-number: -126.5deg;
+}
+
+.pointer {
+  position: relative;
+  background: yellow;
+  height: 190px;
+  width: 20px;
+  left: 140px;
+  top: 3px;
+  clip-path: polygon(9px 10px, 11px 10px, 20px 150px, 10px 190px, 0 150px);
+  transform-origin: 10px 145px;
+  /* transform: rotate(-128deg); */
+  transform: rotate(127deg);
+  transition: transform 0.3s;
+}
+
+.pointer::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  top: 140px;
+  left: 5px;
+  border-radius: 50%;
+}
+
+.endpoint {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: grey;
+  top: 225px;
+  left: 235px;
+  border-radius: 50%;
+}
+
+@keyframes animate-pointer {
+  0% {
+    transform: rotate(-130deg);
+  }
+  80% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(-130deg);
+  }
+}
