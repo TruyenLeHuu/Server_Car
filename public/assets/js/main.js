@@ -18,7 +18,7 @@ $.when(
         `rotate(${-128 + (speed / 180) * 255}deg)`
       );
       };
-      setSpeed();
+      setInterval(() => $("#light-t-l").addClass("light--active"), 5000);
       setInterval(() => setSpeed(Math.floor(Math.random() * 50)), 100);
       socket = io.connect('http://' + Socket_hostIP + ':' + Socket_port, { transports : ['websocket'] });
       socket.on("Status-Light", (data)=>{
