@@ -17,7 +17,7 @@ module.exports = function (io) {
     client.on('message', function (topic, message) {
         switch (topic) {
             case '/Status/Connected':
-                console.log("connect: " + message.toString());
+                console.log("Connect: " + message.toString());
                 io.sockets.emit('Hardware-connect', message.toString());
                 break;
             case '/Status/Disconnected':
@@ -37,6 +37,18 @@ module.exports = function (io) {
                 let seconds = date_ob.getSeconds();
                 console.log("Disconnect: "+ message.toString() + " "+ year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
                 io.sockets.emit('Hardware-disconnect', message.toString());
+                break;
+            case '/Status/Power':
+                console.log("Power: " + message.toString());
+                io.sockets.emit('Status-Power', message.toString());
+                break;
+            case '/Status/Sensor':
+                console.log("Sensor: " + message.toString());
+                io.sockets.emit('Status-Sensor', message.toString());
+                break;
+            case '/Status/Light':
+                console.log("Light: " + message.toString());
+                io.sockets.emit('Status-Light', message.toString());
                 break;
         }
     });
