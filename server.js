@@ -26,11 +26,11 @@ var io = require("socket.io")(server);
 //Import routes
 const route = require('./routes/route')(io);
 //MQTT
-const mqtt = require('./mqtt/mqtt')(io);
+const mqtt = require('./helpers/mqtt')(io);
 //Route middleware
 appExpress.use('/', route);
 
-require('./helper/socket-io')(io, mqtt);
+require('./helpers/socket-io')(io, mqtt);
 
 mongoose
 .connect(URI, {useNewUrlParser:true, useUnifiedTopology:true})
