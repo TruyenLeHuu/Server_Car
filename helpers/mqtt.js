@@ -11,6 +11,7 @@ module.exports = function (io) {
         client.subscribe('/Status/Connected', {qos: 1});
         client.subscribe('/Status/Disconnected', {qos: 1});
         client.subscribe('/Status/Power', {qos: 1});
+        client.subscribe('/Status/Speed', {qos: 1});
         client.subscribe('/Status/Sensor', {qos: 1});
         client.subscribe('/Status/Light', {qos: 1});
     });
@@ -49,6 +50,10 @@ module.exports = function (io) {
             case '/Status/Light':
                 console.log("Light: " + message.toString());
                 io.sockets.emit('Status-Light', message.toString());
+                break;
+            case '/Status/Speed':
+                console.log("Engin node: " + message);
+                io.sockets.emit('Status-Speed', message.toString());
                 break;
         }
     });

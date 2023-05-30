@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .sensor {
-  background-color: #337b5e;
+  background-color: #1d5a41;
   border-radius: 4px;
   width: 24px;
   height: 24px;
@@ -21,6 +21,7 @@
   width: 48px;
   height: 20px;
   border-radius: 12px;
+  background-color: #493b13;
   transition: all 0.2s ease;
 }
 .light--active {
