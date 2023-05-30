@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="modules/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/css/main.css">  
+  <link rel="icon" type="image/x-icon" href="/logo/golf_cart.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./node_modules/dayjs/dayjs.min.js"></script>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/leaflet/dist/leaflet.js"></script>
+  <script src="modules/dayjs/dayjs.min.js"></script>
+  <script src="modules/jquery/dist/jquery.min.js"></script>
+  <script src="modules/leaflet/dist/leaflet.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
   <title>Golf car</title>
 </head>
 
@@ -24,7 +25,7 @@
     </div>
     <div class="flex flex-row w-full h-[50%] gap-12 px-8 pt-12">
       <div class="flex flex-col w-full bg-[#1e1f1f]  p-4 overflow-hidden  rounded-[16px]">
-        <img src="./assets/img/lost_signal.jpg" class="w-full h-full object-cover rounded-[16px]" />
+        <img src="/img/lost_signal.jpg" class="w-full h-full object-cover rounded-[16px]" />
       </div>
       <div class="flex flex-col w-full bg-[#1e1f1f] p-4 overflow-hidden rounded-[16px]">
         <div id="map" class="w-full h-full rounded-[16px]"></div>
@@ -34,7 +35,7 @@
       <div class="flex flex-col w-full h-full bg-[#1e1f1f] p-4 overflow-hidden rounded-[16px]">
         <div class="flex flex-row gap-12">
           <div class="flex flex-col w-[200px] h-[200px] rounded-full border-[5px] border-[#fff] overflow-hidden">
-            <img src="assets/img/avatar.png" class="w-full h-full object-cover" />
+            <img src="/img/avatar.png" class="w-full h-full object-cover" />
           </div>
           <div class="flex flex-col">
             <p class="text-[24px] text-[#fff]">Name: Lê Hữu Truyền</p>
@@ -100,7 +101,7 @@
 
               </div>
             </div>
-            <img class="h-full w-auto object-cover rotate-180" src="./assets/img/car.svg" />
+            <img class="h-full w-auto object-cover rotate-180" src=".//img/car.svg" />
             <div class="flex flex-col gap-16">
               <div class="sensor" id="sensor-r-t">
               </div>
@@ -134,6 +135,5 @@
   </div>
 </body>
 
-<script src="./script.js"></script>
-
+<script src="assets/js/main.js"></script>
 </html>
