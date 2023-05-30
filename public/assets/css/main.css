@@ -3,7 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.sensor {
+  background-color: #337b5e;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease;
+}
+.sensor--active {
+  background-color: #48d193;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease;
+}
+.light {
+  width: 48px;
+  height: 20px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+.light--active {
+  width: 48px;
+  height: 20px;
+  border-radius: 12px;
+  background-color: #ffbc05;
+  transition: all 0.2s ease;
+}
 .speed {
   position: relative;
   display: flex;
