@@ -4,6 +4,7 @@ $.when(
       Socket_port = port;
   })).done(function(){
     const sendButton = document.getElementById('sendButton');
+    const clearButton = document.getElementById('clearButton');
     const logContainer = document.getElementById('logContainer');
     
     socket = io.connect('http://' + Socket_hostIP + ':' + Socket_port, { transports : ['websocket'] });
@@ -45,6 +46,7 @@ $.when(
 
     setInterval(() => { 
         logContainer.appendChild(pointer);
+        logContainer.appendChild(pointerSpace);
         logContainer.removeChild(pointerSpace);
     }, 400)
     setInterval(() => { 
@@ -66,6 +68,9 @@ $.when(
         };
         socket.emit('Send-To-Can', jsonData);
     }
+    clearButton.addEventListener('click', ()=>{
+        logContainer.innerHTML = '';
+    });
 
     setInterval(function () {
         $("#time").html(dayjs().format("HH:mm DD/MM/YYYY"));

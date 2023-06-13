@@ -67,6 +67,15 @@ margin-right: 5px;
 .form-control{
     width: 200px;
 }
+#id-msg{
+    width: 210px;
+}
+#id-target{
+    width: 200px;
+}
 #textInput{
-    width: 600px;
+    width: 550px;
+}
+#clearButton{
+    width: 100px
 }

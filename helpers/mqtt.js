@@ -10,8 +10,8 @@ var client = mqtt.connect('mqtt://' + config.mqtt_host + ":" + config.mqttPort, 
 const filePath = './data.json';
 module.exports = function (io) {
     client.on('connect', function () {
-        client.subscribe('/Status/Connected', {qos: 1});
-        client.subscribe('/Status/Disconnected', {qos: 1});
+        // client.subscribe('/Status/Connected', {qos: 1});
+        // client.subscribe('/Status/Disconnected', {qos: 1});
         client.subscribe('/Status/Power', {qos: 1});
         client.subscribe('/Status/Speed', {qos: 1});
         client.subscribe('/Status/Sensor', {qos: 1});
@@ -20,7 +20,8 @@ module.exports = function (io) {
         
     });
     client.on('message', function (topic, message) {
-        io.sockets.emit('Log-msg', JSON.parse(message.toString()));
+
+        io.sockets.emit('Log-msg', (message.toString()).length > 10 ? JSON.parse(message.toString()) : message.toString());
         
         let date_ob = new Date();
         // current date
