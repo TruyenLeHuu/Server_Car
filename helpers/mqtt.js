@@ -14,8 +14,11 @@ module.exports = function (io) {
         client.subscribe('/Status/Speed', {qos: 1});
         client.subscribe('/Status/Sensor', {qos: 1});
         client.subscribe('/Status/Light', {qos: 1});
+        client.subscribe('/Status/Unknown', {qos: 1});
+        
     });
     client.on('message', function (topic, message) {
+        io.sockets.emit('Log-msg', JSON.parse(message.toString()));
         switch (topic) {
             case '/Status/Connected':
                 console.log("Connect: " + message.toString());
@@ -57,5 +60,8 @@ module.exports = function (io) {
                 break;
         }
     });
+    exports.sendCanMsg = function (data) {
+        client.publish('/Car_Control/Msg', JSON.stringify(data), {qos: 1, retain: false});
+    }
     return exports;
 }

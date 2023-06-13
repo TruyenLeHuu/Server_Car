@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/log.css">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="/logo/golf_cart.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="modules/dayjs/dayjs.min.js"></script>
+  <script src="modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <title>Log golf car</title>
+</head>
+
+<body>
+  <div class="bot-body flex flex-col h-screen w-full py-2">
+    <div class="flex flex-col w-full items-center justify-center">
+      <p id="time" class="text-[20px] font-[700]" ></p>
+    </div>
+    <div class="log-container" id="logContainer"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="form-container">
+            <select class="form-control" id="id-msg">
+              <option value=0>MSG_TYPE_ALL_NODE</option>
+              <option value=1>MSG_TYPE_CMD_FRAME</option>
+              <option value=2>MSG_TYPE_ACK_CMD_FRAME</option>
+              <option value=3>MSG_TYPE_R_N_FRAME</option>
+              <option value=4>MSG_TYPE_TEST_FRAME</option>
+              <option value=5>MSG_TYPE_ACK_TEST_FRAME</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-container">
+            <select class="form-control" id="id-target">
+              <option value=0>TARGET_ALL_NODE</option>
+              <option value=1>TARGET_EGN_CTRL_NODE</option>
+              <option value=2>TARGET_LIGHT_GPS_CTRL_NODE</option>
+              <option value=3>TARGET_MASTER_NODE</option>
+              <option value=4>TARGET_STEER_CTRL_NODE</option>
+              <option value=5>TARGET_SENSOR_NODE</option>
+              <option value=6>TARGET_PW_MANAGEMENT_NODE</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-container">
+            <input type="text" class="form-control" id="textInput" placeholder="Data">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-container">
+            <button class="btn btn-primary" id="sendButton">Gửi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/log.js"></script>
+</html>

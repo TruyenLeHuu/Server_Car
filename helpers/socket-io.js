@@ -5,5 +5,9 @@ module.exports = function (io, mqtt) {
         socket.on("disconnect",()=>{
             console.log("Socket disconnected")
         })
+        socket.on("Send-To-Can", (data)=>{
+            // console.log(data);
+            mqtt.sendCanMsg(data);
+        })
     })
 }

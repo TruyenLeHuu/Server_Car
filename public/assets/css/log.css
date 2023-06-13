@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.bot-body{
+    background-color: rgb(199, 210, 199);
+}
+h1 {
+    text-align: center;
+}
+
+.log-container {
+    background-color: #1f1f1f;
+    height: 600px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.log-item {
+    margin-bottom: 5px;
+}
+
+.log-timestamp {
+    font-weight: bold;
+    margin-left: 10px;
+    color: rgb(246, 222, 7);
+}
+
+.log-data {
+
+    color: rgb(0, 255, 64);
+}
+.log-pointter{
+    font-weight: bold;
+    margin-left: 10px;
+    color: rgb(0, 255, 64);
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* .form-container select,
+.form-container input {
+margin-right: 5px;
+} */
+.button {
+    background-color: #61dafb; /* Màu nút */
+    color: #282c34; /* Màu chữ tối cho nút */
+}
+
+.button:hover {
+    background-color: #0d8cd6;  /* Màu nút khi hover */
+}
+
+.input-text {
+    background-color: #282828; /* Màu nền input */
+    color: #ffffff; /* Màu chữ trắng cho input */
+}
+
+.input-text:focus {
+    background-color: #404040; /* Màu nền input khi focus */
+}
+.form-control{
+    width: 200px;
+}
+#textInput{
+    width: 600px;
+}
