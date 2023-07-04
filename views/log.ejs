@@ -17,9 +17,13 @@
 
 <body>
   <div class="bot-body flex flex-col h-screen w-full py-2">
-    <div class="flex flex-col w-full items-center justify-center">
-      <p id="time" class="text-[20px] font-[700]" ></p>
+    <div class="taskbar">
+      <button class="button flex flex-col btn-primary" id="historyButton">History log</button>
+      <div class="flex flex-col w-full items-center justify-center">
+        <p id="time" class="text-[20px] font-[700]" ></p>
+      </div>
     </div>
+    <div id="realtime-log">
     <div class="log-container" id="logContainer"></div>
     <div class="container">
       <div class="row">
@@ -65,6 +69,40 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="history-log">
+    <div class="log-container" id="logHistoryContainer"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="form-container">
+            <select class="form-control" id="topic-filter-msg">
+              <option value="Data/Speed">Data/Speed</option>
+              <option value="Data/Sensor">Data/Sensor</option>
+              <option value="Data/Power">Data/Power</option>
+              <option value="Data/Location">Data/Location</option>
+              <option value="Data/IMUGyro">Data/IMUGyro</option>
+              <option value="Data/IMUAccel">Data/IMUAccel</option>
+              <option value="Data/IMUEuler">Data/IMUEuler</option>
+              <option value="CarControl/Speed">CarControl/Speed</option>
+              <option value="CarControl/Light">CarControl/Light</option>
+              <option value="CarControl/SteerAngle">CarControl/SteerAngle</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-container">
+            <button class="btn btn-primary" id="filterButton">Filter</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-container">
+            <button class="btn btn-primary" id="clearFilterButton">Clear Filter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 

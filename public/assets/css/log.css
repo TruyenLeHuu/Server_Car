@@ -7,7 +7,15 @@ body {
 h1 {
     text-align: center;
 }
-
+.taskbar {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+  
 .log-container {
     background-color: #1f1f1f;
     height: 600px;
