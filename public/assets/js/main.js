@@ -5,8 +5,83 @@ $.when(
       Socket_hostIP = hostIP;
       Socket_port = port;
   })).done(function(){
+      var velocityData = [25, 26, 27, 28, 29, 25, 26, 50, 28, 29, 25, 26, 27, 28, 29, 25, 26, 27, 28, 29, 25, 26, 27, 28, 29, 25, 26, 27, 28, 29 ]; 
+      var powerData = [60, 62, 64, 65, 63, 60, 62, 64, 65, 63, 60, 62, 64, 65, 63, 60, 62, 64, 65, 63, 60, 62, 64, 65, 63, 60, 62, 64, 65, 63 ]; 
       var mymap = L.map("map").setView([10.8696406, 106.8025968], 18);
-      
+      setInterval(function () {
+        $("#time").html(dayjs().format("HH:mm DD/MM/YYYY"));
+      }, 1000);
+      const powerCanvas = document.getElementById('powerChart');
+      const velocityCanvas = document.getElementById('velocityChart');
+
+      const ctx1 = powerCanvas.getContext('2d');
+      const ctx2 = velocityCanvas.getContext('2d');
+
+      const powerChart = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: Array.from({ length: powerData.length }, (_, i) => i + 1),
+          datasets: [{
+            label: 'Power',
+            data: powerData,
+            fill: false,
+            borderColor: '#ff6384',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: false
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: 'Power (W)'
+            }
+          }
+          
+        }
+      });
+    
+      const velocityChart = new Chart(ctx2, {
+        type: 'line',
+        data: {
+          labels: Array.from({ length: velocityData.length }, (_, i) => i + 1),
+          datasets: [{
+            label: 'Velocity',
+            data: velocityData,
+            fill: false,
+            borderColor: '#36a2eb',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: false
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: 'Velocity (km/h)'
+            }
+          }
+        }
+      });
+
       L.tileLayer("assets/map/{z}/{x}/{y}.png", { maxZoom: 19, minZoom: 17 }).addTo(
       mymap
       );
