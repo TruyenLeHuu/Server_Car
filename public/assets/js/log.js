@@ -135,7 +135,7 @@ $.when(
         const jsonData = {
         id_msg: parseInt(id_msg.value),
         id_target: parseInt(id_target.value),
-        msg: data.value
+        msg: data.value + "\r\n"
         };
         socket.emit('Send-To-Can', jsonData);
     }

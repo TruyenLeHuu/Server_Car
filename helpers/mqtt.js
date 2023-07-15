@@ -19,6 +19,7 @@ module.exports = function (io) {
         client.subscribe('Data/IMUEuler', {qos: 1});
         client.subscribe('Data/IMUAccel', {qos: 1});
         client.subscribe('Data/IMUGyro', {qos: 1});
+        client.subscribe('CarControl/SteerAngle', {qos: 1});
     });
     client.on('message', function (topic, message) {
 
@@ -54,6 +55,7 @@ module.exports = function (io) {
               return;
             }
           });
+        console.log("topic ", topic, "message ", message.toString())
         switch (topic) {
             case 'Data/Connected':
                 console.log("Connect: " + message.toString());
