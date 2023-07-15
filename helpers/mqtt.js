@@ -10,19 +10,22 @@ var client = mqtt.connect('mqtt://' + config.mqtt_host + ":" + config.mqttPort, 
 const filePath = './data.json';
 module.exports = function (io) {
     client.on('connect', function () {
-        // client.subscribe('/Status/Connected', {qos: 1});
-        // client.subscribe('/Status/Disconnected', {qos: 1});
-        client.subscribe('/Status/Power', {qos: 1});
-        client.subscribe('/Status/Speed', {qos: 1});
-        client.subscribe('/Status/Sensor', {qos: 1});
-        client.subscribe('/Status/Light', {qos: 1});
-        client.subscribe('/Status/Unknown', {qos: 1});
-        
+        client.subscribe('Data/Connected', {qos: 1});
+        client.subscribe('Data/Disconnected', {qos: 1}); 
+        client.subscribe('Data/Power', {qos: 1});
+        client.subscribe('Data/Speed', {qos: 1});
+        client.subscribe('Data/Sensor', {qos: 1});
+        client.subscribe('Data/Location', {qos: 1});
+        client.subscribe('Data/IMUEuler', {qos: 1});
+        client.subscribe('Data/IMUAccel', {qos: 1});
+        client.subscribe('Data/IMUGyro', {qos: 1});
     });
     client.on('message', function (topic, message) {
 
         io.sockets.emit('Log-msg', (message.toString()).length > 10 ? JSON.parse(message.toString()) : message.toString());
         
+        // console.info(topic, message.toString());
+
         let date_ob = new Date();
         // current date
         // adjust 0 before single digit date
@@ -50,54 +53,49 @@ module.exports = function (io) {
               console.error('Append file error, err num:', err);
               return;
             }
-            // console.log('File append successful.');
           });
-        // fs.readFile(filePath, 'utf8', (err, data) => {
-        //     if (err) {
-        //       console.error('Read file error, err num:', err);
-        //       return;
-        //     }
-
-        //     const jsonStrings = data.trim().split('\n');
-
-        //     jsonStrings.forEach((jsonString, index) => {
-        //       try {
-        //         const jsonData = JSON.parse(jsonString);
-        //         console.log(`Json string ${index + 1}:`, jsonData.time);
-        //       } catch (error) {
-        //         console.error(`Json string error num${index + 1}:`, error);
-        //       }
-        //     })
-        // });
         switch (topic) {
-            case '/Status/Connected':
+            case 'Data/Connected':
                 console.log("Connect: " + message.toString());
                 io.sockets.emit('Hardware-connect', message.toString());
                 break;
-            case '/Status/Disconnected':
+            case 'Data/Disconnected':
                 console.log("Disconnect: "+ message.toString() + " "+ year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
                 io.sockets.emit('Hardware-disconnect', message.toString());
                 break;
-            case '/Status/Power':
+            case 'Data/Power':
                 console.log("Power: " + message.toString());
-                io.sockets.emit('Status-Power', message.toString());
+                io.sockets.emit('Data-Power', message.toString());
                 break;
-            case '/Status/Sensor':
+            case 'Data/Sensor':
                 console.log("Sensor: " + message.toString());
-                io.sockets.emit('Status-Sensor', message.toString());
+                io.sockets.emit('Data-Sensor', message.toString());
                 break;
-            case '/Status/Light':
+            case 'Data/Speed':
                 console.log("Light: " + message.toString());
-                io.sockets.emit('Status-Light', message.toString());
+                io.sockets.emit('Data-Light', message.toString());
                 break;
-            case '/Status/Speed':
-                console.log("Engin node: " + message);
-                io.sockets.emit('Status-Speed', message.toString());
+            case 'Data/Location':
+                console.log("Location: " + message.toString());
+                io.sockets.emit('Data-Location', message.toString());
+                break;
+            case 'Data/IMUEuler':
+                console.log("IMUEuler: " + message.toString());
+                io.sockets.emit('Data-IMUEuler', message.toString());
+                break;
+            case 'Data/IMUAccel':
+                console.log("IMUAccel: " + message.toString());
+                io.sockets.emit('Data-IMUAccel', message.toString());
+                break;
+            case 'Data/IMUGyro':
+                console.log("IMUGyro: " + message.toString());
+                io.sockets.emit('Data-IMUGyro', message.toString());
                 break;
         }
     });
     exports.sendCanMsg = function (data) {
-        client.publish('/Car_Control/Msg', JSON.stringify(data), {qos: 1, retain: false});
+        client.publish('CarControl/Msg', JSON.stringify(data), {qos: 1, retain: false});
+        console.log(data)
     }
     return exports;
 }
