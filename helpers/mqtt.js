@@ -10,20 +10,20 @@ var client = mqtt.connect('mqtt://' + config.mqtt_host + ":" + config.mqttPort, 
 const filePath = './data.json';
 module.exports = function (io) {
     client.on('connect', function () {
-        client.subscribe('Data/Connected', {qos: 1});
-        client.subscribe('Data/Disconnected', {qos: 1}); 
-        client.subscribe('Data/Power', {qos: 1});
-        client.subscribe('Data/Speed', {qos: 1});
-        client.subscribe('Data/Sensor', {qos: 1});
-        client.subscribe('Data/Location', {qos: 1});
-        client.subscribe('Data/IMUEuler', {qos: 1});
-        client.subscribe('Data/IMUAccel', {qos: 1});
-        client.subscribe('Data/IMUGyro', {qos: 1});
+        client.subscribe('Data/#', {qos: 1});
+        // client.subscribe('Data/Disconnected', {qos: 1}); 
+        // client.subscribe('Data/Power', {qos: 1});
+        // client.subscribe('Data/Speed', {qos: 1});
+        // client.subscribe('Data/Sensor', {qos: 1});
+        // client.subscribe('Data/Location', {qos: 1});
+        // client.subscribe('Data/IMUEuler', {qos: 1});
+        // client.subscribe('Data/IMUAccel', {qos: 1});
+        // client.subscribe('Data/IMUGyro', {qos: 1});
         client.subscribe('CarControl/SteerAngle', {qos: 1});
+        client.subscribe('CarControl/Speed', {qos: 1});
+        client.subscribe('CarControl/Light', {qos: 1});
     });
     client.on('message', function (topic, message) {
-
-        io.sockets.emit('Log-msg', (message.toString()).length > 10 ? JSON.parse(message.toString()) : message.toString());
         
         // console.info(topic, message.toString());
 
@@ -47,15 +47,17 @@ module.exports = function (io) {
         var jsonString ={
             time: year + "-" + month + "-" + date + " " + hours + ":" + ((Math.floor(minutes / 10) > 0) ? "" : "0") + minutes + ":"+ ((Math.floor(seconds / 10) > 0) ? "" : "0") + seconds + ":" + ((Math.floor(miliseconds / 100) > 0) ? "" : "0") + ((Math.floor(miliseconds / 10) > 0) ? "" : "0") + miliseconds,
             topic: topic,
-            message: message.toString()
+            message: (message.toString()).length > 10 ? JSON.parse(message.toString()) : message.toString()
         }
+        io.sockets.emit('Log-msg', jsonString);
+        
         fs.appendFile(filePath, JSON.stringify(jsonString) + '\n', 'utf8', (err) => {
             if (err) {
               console.error('Append file error, err num:', err);
               return;
             }
           });
-        console.log("topic ", topic, "message ", message.toString())
+        // console.log("topic ", topic, "message ", message.toString())
         switch (topic) {
             case 'Data/Connected':
                 console.log("Connect: " + message.toString());
@@ -98,6 +100,7 @@ module.exports = function (io) {
     exports.sendCanMsg = function (data) {
         client.publish('CarControl/Msg', JSON.stringify(data), {qos: 1, retain: false});
         console.log(data)
+        // client.publish('CarControl/SteerAngle', "#2=-50\r\n", {qos: 1, retain: false});
     }
     return exports;
 }
