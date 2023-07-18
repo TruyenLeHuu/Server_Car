@@ -101,6 +101,23 @@ module.exports = function (io) {
         client.publish('CarControl/Msg', JSON.stringify(data), {qos: 1, retain: false});
         console.log(data)
         // client.publish('CarControl/SteerAngle', "#2=-50\r\n", {qos: 1, retain: false});
+
+        // client.publish('Data/Location', JSON.stringify({
+        //     node_id : 13,
+        //     lat: 10.86951,
+        //     long: 106.80232,
+        // }), {qos: 1, retain: false});
+        // client.publish('Data/Location', JSON.stringify({
+        //     node_id : 13,
+        //     lat: 10.86937, 
+        //     long: 106.80240,
+        // }), {qos: 1, retain: false})
+        // client.publish('Data/Location', JSON.stringify({
+        //     node_id : 13,
+        //     lat: 10.86931, 
+        //     long: 106.80275,
+        // }), {qos: 1, retain: false});
+
     }
     return exports;
 }

@@ -31560,3 +31560,90 @@
 {"time":"2023-07-17 21:53:24:693","topic":"Data/Location","message":{"node_id":5,"id_msg":1,"id_target":0,"long":147.564646,"lat":157.114564}}
 {"time":"2023-07-17 21:53:24:752","topic":"Data/Location","message":{"node_id":5,"id_msg":1,"id_target":0,"long":147.564646,"lat":157.114564}}
 {"time":"2023-07-17 21:53:24:812","topic":"Data/Location","message":{"node_id":5,"id_msg":1,"id_target":0,"long":147.564646,"lat":157.114564}}
+{"time":"2023-07-17 22:06:20:681","topic":"Data/Disconnected","message":"Esp32"}
+{"time":"2023-07-17 22:06:24:923","topic":"Data/Disconnected","message":"Esp32"}
+{"time":"2023-07-18 19:59:06:562","topic":"Data/Location","message":{"node_id":13,"lat":10.8696406,"long":106.8025968}}
+{"time":"2023-07-18 20:02:45:037","topic":"Data/Location","message":{"node_id":13,"lat":10.8696406,"long":106.8025968}}
+{"time":"2023-07-18 20:03:19:407","topic":"Data/Location","message":{"node_id":13,"lat":10.8696406,"long":106.8025968}}
+{"time":"2023-07-18 20:07:33:007","topic":"Data/Location","message":{"node_id":13,"lat":10.8696406,"long":106.8025968,"time":"2023-07-18 20:07:33:006"}}
+{"time":"2023-07-18 20:07:53:817","topic":"Data/Location","message":{"node_id":13,"lat":10.8696406,"long":106.8025968,"time":"2023-07-18 20:07:53:815"}}
+{"time":"2023-07-18 20:08:53:984","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:08:53:982"}}
+{"time":"2023-07-18 20:12:16:733","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:12:16:731"}}
+{"time":"2023-07-18 20:13:08:298","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:13:08:295"}}
+{"time":"2023-07-18 20:14:04:990","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:14:04:988"}}
+{"time":"2023-07-18 20:14:11:049","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:14:11:047"}}
+{"time":"2023-07-18 20:15:03:368","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:15:03:366"}}
+{"time":"2023-07-18 20:19:06:536","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:19:06:535"}}
+{"time":"2023-07-18 20:21:25:366","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:21:25:364"}}
+{"time":"2023-07-18 20:24:10:258","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:24:10:255"}}
+{"time":"2023-07-18 20:25:00:552","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:25:00:549"}}
+{"time":"2023-07-18 20:26:10:314","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:26:10:311"}}
+{"time":"2023-07-18 20:26:40:888","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:892","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:894","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:898","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:901","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:896","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:903","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:904","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:911","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:913","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:908","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:916","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:918","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:919","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:924","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:927","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:928","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:931","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:935","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:940","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:943","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:945","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:947","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:948","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:951","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:952","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:955","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:957","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:962","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:961","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:964","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:966","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:970","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:40:988","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:013","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:016","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:017","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:020","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:036","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:039","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:047","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:052","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:055","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:061","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:064","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:723","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:728","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:729","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:26:41:728","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:26:40:886"}}
+{"time":"2023-07-18 20:27:24:984","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:27:24:982"}}
+{"time":"2023-07-18 20:27:41:697","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:27:41:695"}}
+{"time":"2023-07-18 20:27:56:597","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:616","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:618","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:631","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:647","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:649","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:663","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:679","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:681","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:56:695","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:57:285","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:27:57:289","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:27:56:595"}}
+{"time":"2023-07-18 20:28:31:719","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:28:31:717"}}
+{"time":"2023-07-18 20:29:14:963","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:29:13:951"}}
+{"time":"2023-07-18 20:30:25:865","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232,"time":"2023-07-18 20:30:25:863"}}
+{"time":"2023-07-18 20:30:38:936","topic":"Data/Location","message":{"node_id":13,"lat":10.86937,"long":106.8024,"time":"2023-07-18 20:30:38:934"}}
+{"time":"2023-07-18 20:30:52:596","topic":"Data/Location","message":{"node_id":13,"lat":10.86931,"long":106.80275,"time":"2023-07-18 20:30:52:594"}}
+{"time":"2023-07-18 20:34:53:560","topic":"Data/Location","message":{"node_id":13,"lat":10.86951,"long":106.80232}}

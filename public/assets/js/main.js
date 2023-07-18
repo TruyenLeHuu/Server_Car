@@ -16,7 +16,7 @@ $.when(
 
       const ctx1 = powerCanvas.getContext('2d');
       const ctx2 = velocityCanvas.getContext('2d');
-
+      socket = io.connect('http://' + Socket_hostIP + ':' + Socket_port, { transports : ['websocket'] });
       const powerChart = new Chart(ctx1, {
         type: 'line',
         data: {
@@ -85,6 +85,42 @@ $.when(
       L.tileLayer("assets/map/{z}/{x}/{y}.png", { maxZoom: 19, minZoom: 17 }).addTo(
       mymap
       );
+      let carIcon = L.icon({
+        iconUrl: "./logo/golf-cart1.png",
+        iconSize: [40, 40]
+      })
+      let circle = L.circle([10.86588, 106.80254], {
+          color: 'orange',
+          fillColor: 'orange',
+          fillOpacity: 0.5,
+          radius: 10
+      }).addTo(mymap)
+      let marker = L.marker(
+        [10.86588, 106.80254],
+        {
+            icon: carIcon
+        }
+      ).addTo(mymap);
+      socket.on('Data-Location', async (data)=>{
+        data = JSON.parse(data)
+        console.log(data);  
+        mymap.removeLayer(circle);
+        mymap.removeLayer(marker);
+        circle = L.circle([data.lat, data.long], {
+                        color: 'orange',
+                        fillColor: 'orange',
+                        fillOpacity: 0.5,
+                        radius: 10
+                    }).addTo(mymap).bindPopup(dayjs().format("HH:mm DD/MM/YYYY"));
+        marker = await L.marker(
+                    [data.lat, data.long],
+                    {
+                        icon: carIcon
+                    }
+                ).addTo(mymap).bindPopup(dayjs().format("HH:mm DD/MM/YYYY"));  
+      })
+   
+
       const setSpeed = (speed) => {
       $("#speed_wheel_pointer").css(  
         "transform",
@@ -111,7 +147,7 @@ $.when(
       }}, 1000)
       }
       // setInterval(() => setSpeed(Math.floor(Math.random() * 100)), 100);
-      socket = io.connect('http://' + Socket_hostIP + ':' + Socket_port, { transports : ['websocket'] });
+      
       socket.on("Status-Light", (data)=>{
         console.log(data);
         $("#light-t-r").removeClass("light--active")
