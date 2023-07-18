@@ -19,7 +19,9 @@ module.exports = function (io) {
         client.subscribe('Data/IMUEuler', {qos: 1});
         client.subscribe('Data/IMUAccel', {qos: 1});
         client.subscribe('Data/IMUGyro', {qos: 1});
-        client.subscribe('CarControl/SteerAngle', {qos: 1});
+        // client.subscribe('CarControl/SteerAngle', {qos: 1});
+        // client.subscribe('CarControl/Speed', {qos: 1});
+
     });
     client.on('message', function (topic, message) {
 
