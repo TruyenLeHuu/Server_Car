@@ -47,7 +47,7 @@ module.exports = function (io) {
         var jsonString ={
             time: year + "-" + month + "-" + date + " " + hours + ":" + ((Math.floor(minutes / 10) > 0) ? "" : "0") + minutes + ":"+ ((Math.floor(seconds / 10) > 0) ? "" : "0") + seconds + ":" + ((Math.floor(miliseconds / 100) > 0) ? "" : "0") + ((Math.floor(miliseconds / 10) > 0) ? "" : "0") + miliseconds,
             topic: topic,
-            message: (message.toString()).length > 10 ? JSON.parse(message.toString()) : message.toString()
+            message: (message.toString()).length > 20 ? JSON.parse(message.toString()) : message.toString()
         }
         io.sockets.emit('Log-msg', jsonString);
         
@@ -98,10 +98,10 @@ module.exports = function (io) {
         }
     });
     exports.sendCanMsg = function (data) {
-        client.publish('CarControl/Msg', JSON.stringify(data), {qos: 1, retain: false});
-        console.log(data)
-        // client.publish('CarControl/SteerAngle', "#2=-50\r\n", {qos: 1, retain: false});
-
+        // client.publish('CarControl/Msg', JSON.stringify(data), {qos: 1, retain: false});
+        // console.log(data)
+        client.publish('CarControl/SteerAngle', "#2=-50.115\r\n", {qos: 1, retain: false});
+        // client.publish('CarControl/SteerAngle', String(-50.13322), {qos: 1, retain: false});
         // client.publish('Data/Location', JSON.stringify({
         //     node_id : 13,
         //     lat: 10.86951,
